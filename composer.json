@@ -1,0 +1,20 @@
+{
+    "name": "projecthanif/php-test",
+    "description": "A random PHP test project",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Projecthanif\\PhpTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ibrahim Mustapha Alhaji",
+            "email": "iamustapha213@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    }
+}
