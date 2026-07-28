@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -S localhost:8091 -t public)",
+      "Bash(curl -s localhost:8091/)",
+      "Bash(curl -s \"localhost:8091/users?_limit=2\")",
+      "Bash(curl -s localhost:8091/users/3)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" localhost:8091/users/999)",
+      "Bash(curl -s localhost:8091/posts/2/comments)",
+      "Bash(curl -s \"localhost:8091/products?_limit=1\")",
+      "Bash(curl -s -X POST localhost:8091/users -H 'Content-Type: application/json' -d '{\"name\":\"Test User\"}')",
+      "Bash(curl -s -X PATCH localhost:8091/users/1 -H 'Content-Type: application/json' -d '{\"city\":\"Kano\"}')",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" -X DELETE localhost:8091/users/1)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" localhost:8091/nope)",
+      "Bash(php -r 'echo md5\\(stream_get_contents\\(STDIN\\)\\);')",
+      "Bash(curl -s localhost:8091/posts/5)",
+      "Bash(kill %1)",
+      "Bash(rm -f /tmp/php-fake-api.log)"
+    ],
+    "additionalDirectories": [
+      "/private/tmp"
+    ]
+  }
+}
